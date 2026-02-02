@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(copy \"c:\\\\Users\\\\newga\\\\Desktop\\\\drive-easy-now-main\\\\src\\\\assets\\\\hero-car.jpg\" \"c:\\\\Users\\\\newga\\\\Desktop\\\\drive-easy-now-main\\\\assets\\\\hero-car.jpg\")",
+      "Bash(copy \"c:\\\\Users\\\\newga\\\\Desktop\\\\drive-easy-now-main\\\\src\\\\assets\\\\car-economy.jpg\" \"c:\\\\Users\\\\newga\\\\Desktop\\\\drive-easy-now-main\\\\assets\\\\car-economy.jpg\")",
+      "Bash(copy:*)",
+      "Bash(copy \"c:\\\\Users\\\\newga\\\\Desktop\\\\drive-easy-now-main\\\\src\\\\assets\\\\car-premium.jpg\" \"c:\\\\Users\\\\newga\\\\Desktop\\\\drive-easy-now-main\\\\assets\\\\car-premium.jpg\")",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git rebase:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
