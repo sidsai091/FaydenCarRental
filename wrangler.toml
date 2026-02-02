@@ -1,6 +1,2 @@
 name = "fayden-car-rental"
 compatibility_date = "2026-02-02"
-main = "workers-site/index.js"
-
-[site]
-bucket = "./"
