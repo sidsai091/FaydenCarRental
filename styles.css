@@ -531,10 +531,12 @@ ul {
 
 .vehicle-image-inner img.hidden {
   opacity: 0;
+  pointer-events: none;
 }
 
 .vehicle-image-inner img.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .vehicle-nav-btn {
@@ -600,6 +602,8 @@ ul {
   background: linear-gradient(to top, hsl(var(--card)), transparent);
   pointer-events: none;
 }
+
+
 
 .vehicle-price {
   position: absolute;
@@ -1409,8 +1413,12 @@ input[type="time"]:focus {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 /* Form Labels & Spacing */
-.form-field { margin-bottom: 1.5rem; }
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
 .form-label {
   display: block;
   color: hsl(var(--foreground));
@@ -1420,5 +1428,58 @@ input[type="time"]:focus {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.form-grid { display: grid; gap: 1rem; margin-bottom: 0; }
-.form-group { position: relative; margin-bottom: 0; }
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Lightbox Navigation */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsl(var(--card) / 0.8);
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+  z-index: 1001;
+}
+
+.lightbox-nav:hover {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .lightbox-prev {
+    left: 2rem;
+  }
+
+  .lightbox-next {
+    right: 2rem;
+  }
+}

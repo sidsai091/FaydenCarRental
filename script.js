@@ -104,29 +104,85 @@
         dot.className = 'vehicle-dot' + (i === activeIndex ? ' active' : '');
       });
     });
-
-    // Lightbox on image click
-    imgs.forEach(function (img) {
-      img.addEventListener('click', function () {
-        document.getElementById('lightboxImg').src = this.src;
-        document.getElementById('lightbox').classList.add('open');
-      });
-    });
   });
 })();
 
-// Lightbox Close
+// Lightbox Functionality
 (function () {
   var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var closeBtn = document.getElementById('lightboxClose');
+  var prevBtn = document.getElementById('lightboxPrev');
+  var nextBtn = document.getElementById('lightboxNext');
 
-  document.getElementById('lightboxClose').addEventListener('click', function () {
-    lightbox.classList.remove('open');
+  var currentImages = []; // Array of image sources
+  var currentIndex = 0;   // Current index in the array
+
+  // Function to open lightbox
+  function openLightbox(images, index) {
+    currentImages = images;
+    currentIndex = index;
+    updateLightboxImage();
+    lightbox.classList.add('open');
+  }
+
+  // Function to update image based on current index
+  function updateLightboxImage() {
+    if (currentImages.length > 0) {
+      lightboxImg.src = currentImages[currentIndex];
+    }
+  }
+
+  // Next Image
+  function nextImage(e) {
+    if (e) e.stopPropagation();
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    updateLightboxImage();
+  }
+
+  // Previous Image
+  function prevImage(e) {
+    if (e) e.stopPropagation();
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    updateLightboxImage();
+  }
+
+  // Attach click events to all vehicle images
+  document.querySelectorAll('.vehicle-card').forEach(function (card) {
+    var imgs = Array.from(card.querySelectorAll('.vehicle-image-inner img'));
+    var imgSources = imgs.map(function (img) { return img.src; });
+
+    imgs.forEach(function (img, index) {
+      img.addEventListener('click', function () {
+        openLightbox(imgSources, index);
+      });
+    });
   });
 
+  // Event Listeners for Lightbox Controls
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      lightbox.classList.remove('open');
+    });
+  }
+
+  if (nextBtn) nextBtn.addEventListener('click', nextImage);
+  if (prevBtn) prevBtn.addEventListener('click', prevImage);
+
+  // Close on background click
   lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) {
       lightbox.classList.remove('open');
     }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.classList.contains('open')) return;
+
+    if (e.key === 'Escape') lightbox.classList.remove('open');
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
   });
 })();
 
