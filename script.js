@@ -349,3 +349,20 @@ document.getElementById('bookingForm').addEventListener('submit', function (e) {
   // Reset form
   this.reset();
 });
+
+// Gallery Lightbox
+(function () {
+  var galleryItems = document.querySelectorAll('.gallery-item');
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+
+  galleryItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var img = this.querySelector('.gallery-image');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('open');
+      }
+    });
+  });
+})();
