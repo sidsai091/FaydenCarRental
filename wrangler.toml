@@ -1,0 +1,5 @@
+name = "fayden-car-rental"
+compatibility_date = "2026-02-02"
+
+[site]
+bucket = "./"
