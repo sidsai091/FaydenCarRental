@@ -212,33 +212,84 @@
   });
 })();
 
-// Date Input Formatting (DD/MM/YYYY)
+// Date Input Validation for Date Picker
 (function () {
-  document.querySelectorAll('.date-input').forEach(function (input) {
-    input.addEventListener('input', function (e) {
-      var val = this.value.replace(/\D/g, '');
-      if (val.length > 8) val = val.slice(0, 8);
-      if (val.length >= 5) {
-        this.value = val.slice(0, 2) + '/' + val.slice(2, 4) + '/' + val.slice(4);
-      } else if (val.length >= 3) {
-        this.value = val.slice(0, 2) + '/' + val.slice(2);
-      } else {
-        this.value = val;
-      }
-    });
+  var pickupInput = document.querySelector('input[name="pickupDate"]');
+  var returnInput = document.querySelector('input[name="returnDate"]');
+  var allDateTimeInputs = document.querySelectorAll('input[type="date"], input[type="time"]');
 
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Backspace' && (this.value.endsWith('/'))) {
-        e.preventDefault();
-        this.value = this.value.slice(0, -2);
+  // Auto-open picker on click anywhere in the input
+  allDateTimeInputs.forEach(function (input) {
+    input.addEventListener('click', function () {
+      // Check if showPicker is supported (modern browsers)
+      if ('showPicker' in this) {
+        this.showPicker();
       }
     });
   });
+
+  if (!pickupInput || !returnInput) return;
+
+  // Set minimum date to today
+  var today = new Date().toISOString().split('T')[0];
+  pickupInput.setAttribute('min', today);
+  returnInput.setAttribute('min', today);
+
+  // When pickup date changes, update return date minimum
+  pickupInput.addEventListener('change', function () {
+    returnInput.setAttribute('min', this.value || today);
+
+    // If return date is before pickup date, clear it
+    if (returnInput.value && returnInput.value < this.value) {
+      returnInput.value = '';
+    }
+  });
 })();
 
-// Booking Form Submit
+// Booking Form Submit - Send to WhatsApp
 document.getElementById('bookingForm').addEventListener('submit', function (e) {
   e.preventDefault();
-  alert("Thank you! We'll contact you shortly to confirm your booking.");
+
+  // Get form data
+  var name = this.name.value;
+  var phone = this.phone.value;
+  var vehicle = this.vehicle.value;
+  var pickupDate = this.pickupDate.value;
+  var pickupTime = this.pickupTime.value;
+  var returnDate = this.returnDate.value;
+  var returnTime = this.returnTime.value;
+  var location = this.location.value;
+
+  // Format dates for better readability
+  var formattedPickupDate = new Date(pickupDate).toLocaleDateString('en-GB');
+  var formattedReturnDate = new Date(returnDate).toLocaleDateString('en-GB');
+
+  // Create WhatsApp message
+  var message = '*🚗 NEW CAR RENTAL BOOKING REQUEST*\n\n';
+  message += '*Name:* ' + name + '\n';
+  message += '*Phone Number:* ' + phone + '\n';
+  message += '*Vehicle:* ' + vehicle + '\n\n';
+  message += '*📅 Pickup Details:*\n';
+  message += '• Date: ' + formattedPickupDate + '\n';
+  message += '• Time: ' + pickupTime + '\n\n';
+  message += '*📅 Return Details:*\n';
+  message += '• Date: ' + formattedReturnDate + '\n';
+  message += '• Time: ' + returnTime + '\n\n';
+  message += '*📍 Delivery Location:* ' + location + '\n\n';
+  message += 'Looking forward to hearing from you! 🙏';
+
+  // Fayden Car Rental WhatsApp number (601157746854)
+  var whatsappNumber = '601157746854';
+
+  // Encode message for URL
+  var encodedMessage = encodeURIComponent(message);
+
+  // Create WhatsApp URL
+  var whatsappURL = 'https://wa.me/' + whatsappNumber + '?text=' + encodedMessage;
+
+  // Open WhatsApp
+  window.open(whatsappURL, '_blank');
+
+  // Reset form
   this.reset();
 });
