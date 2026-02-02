@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveLux - Premium Car Rental Service</title>
+  <meta name="description" content="DriveLux - Premium car rental service delivering exceptional experiences. From economy to VIP, we have the perfect ride for every journey." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container-custom">
+      <div class="navbar-inner">
+        <a href="#hero" class="navbar-brand">
+          <svg class="icon-2xl" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+          <span class="navbar-brand-text">DRIVE<span style="color:hsl(38,92%,50%)">LUX</span></span>
+        </a>
+        <div class="navbar-links">
+          <a href="#hero" class="navbar-link">Home</a>
+          <a href="#about" class="navbar-link">About</a>
+          <a href="#fleet" class="navbar-link">Fleet</a>
+          <a href="#booking" class="navbar-link">How to Book</a>
+          <a href="#faq" class="navbar-link">FAQ</a>
+          <a href="#contact" class="navbar-link">Contact</a>
+          <a href="#contact" class="btn-primary">Book Now</a>
+        </div>
+        <button class="navbar-toggle" id="navToggle" aria-label="Toggle menu">
+          <svg class="icon-lg" id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg class="icon-lg" id="closeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="navbar-mobile" id="navMobile">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#booking">How to Book</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:1rem;">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <img src="assets/hero-car.jpg" alt="Luxury car" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container-custom animate-fade-up">
+      <p class="hero-subtitle">Premium Car Rental Service</p>
+      <h1 class="hero-title">Drive Your Dreams, <span class="text-gradient">Anywhere</span></h1>
+      <p class="hero-desc">Experience luxury, comfort, and reliability with our premium fleet. From economy to VIP &ndash; we have the perfect ride for every journey.</p>
+      <div class="hero-buttons">
+        <a href="#fleet" class="btn-primary">Explore Our Fleet</a>
+        <a href="#contact" class="btn-outline">Book Your Ride</a>
+      </div>
+    </div>
+    <a href="#why-us" class="hero-scroll">
+      <svg class="icon-2xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us" class="section-padding" style="background:hsl(var(--secondary))">
+    <div class="container-custom">
+      <div class="section-header">
+        <p class="section-label">Why Choose Us</p>
+        <h2 class="section-title">The DriveLux <span class="text-gradient">Advantage</span></h2>
+      </div>
+      <div class="reasons-grid">
+        <div class="card-glass reason-card">
+          <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+          <h3 class="reason-title">Fully Insured</h3>
+          <p class="reason-desc">All our vehicles come with comprehensive insurance coverage for your peace of mind.</p>
+        </div>
+        <div class="card-glass reason-card">
+          <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3 class="reason-title">24/7 Service</h3>
+          <p class="reason-desc">Round-the-clock support and availability for bookings and roadside assistance.</p>
+        </div>
+        <div class="card-glass reason-card">
+          <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3 class="reason-title">Flexible Pickup</h3>
+          <p class="reason-desc">Pick up and drop off at your preferred location &ndash; airport, hotel, or doorstep.</p>
+        </div>
+        <div class="card-glass reason-card">
+          <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg></div>
+          <h3 class="reason-title">Dedicated Support</h3>
+          <p class="reason-desc">Our customer service team is always ready to assist with any queries.</p>
+        </div>
+        <div class="card-glass reason-card">
+          <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
+          <h3 class="reason-title">Easy Payment</h3>
+          <p class="reason-desc">Multiple payment options including credit cards, bank transfer, and cash.</p>
+        </div>
+        <div class="card-glass reason-card">
+          <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+          <h3 class="reason-title">Quality Fleet</h3>
+          <p class="reason-desc">Well-maintained, regularly serviced vehicles for a smooth driving experience.</p>
+        </div>
+      </div>
+      <!-- Mobile slider version -->
+      <div class="reasons-slider-wrap">
+        <div class="reasons-slider">
+          <div class="card-glass reason-card">
+            <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+            <h3 class="reason-title">Fully Insured</h3>
+            <p class="reason-desc">All our vehicles come with comprehensive insurance coverage for your peace of mind.</p>
+          </div>
+          <div class="card-glass reason-card">
+            <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3 class="reason-title">24/7 Service</h3>
+            <p class="reason-desc">Round-the-clock support and availability for bookings and roadside assistance.</p>
+          </div>
+          <div class="card-glass reason-card">
+            <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3 class="reason-title">Flexible Pickup</h3>
+            <p class="reason-desc">Pick up and drop off at your preferred location &ndash; airport, hotel, or doorstep.</p>
+          </div>
+          <div class="card-glass reason-card">
+            <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg></div>
+            <h3 class="reason-title">Dedicated Support</h3>
+            <p class="reason-desc">Our customer service team is always ready to assist with any queries.</p>
+          </div>
+          <div class="card-glass reason-card">
+            <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
+            <h3 class="reason-title">Easy Payment</h3>
+            <p class="reason-desc">Multiple payment options including credit cards, bank transfer, and cash.</p>
+          </div>
+          <div class="card-glass reason-card">
+            <div class="reason-icon-wrap"><svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <h3 class="reason-title">Quality Fleet</h3>
+            <p class="reason-desc">Well-maintained, regularly serviced vehicles for a smooth driving experience.</p>
+          </div>
+        </div>
+        <div class="reasons-dots">
+          <button class="active" aria-label="Card 1"></button>
+          <button aria-label="Card 2"></button>
+          <button aria-label="Card 3"></button>
+          <button aria-label="Card 4"></button>
+          <button aria-label="Card 5"></button>
+          <button aria-label="Card 6"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about" class="section-padding">
+    <div class="container-custom">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label" style="text-align:left">About Us</p>
+          <h2 class="section-title" style="text-align:left">Your Trusted <span class="text-gradient">Partner</span> on the Road</h2>
+          <p>Founded with a passion for exceptional service, DriveLux has been delivering premium car rental experiences since 2015. We believe that every journey should be comfortable, safe, and memorable.</p>
+          <p>With a diverse fleet ranging from economical daily drivers to luxury executive vehicles, we cater to every need &ndash; whether it's a business trip, family vacation, or special occasion.</p>
+          <div class="about-stats">
+            <div><p class="about-stat-num">500+</p><p class="about-stat-label">Happy Clients</p></div>
+            <div><p class="about-stat-num">50+</p><p class="about-stat-label">Fleet Vehicles</p></div>
+            <div><p class="about-stat-num">9+</p><p class="about-stat-label">Years Experience</p></div>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="card-glass">
+            <div class="about-card-inner">
+              <div class="about-card-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div>
+                <h3 class="about-card-title">Our Vision</h3>
+                <p class="about-card-desc">To be the leading car rental service, recognized for excellence, reliability, and customer satisfaction. We envision a future where premium mobility is accessible to everyone.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-glass">
+            <div class="about-card-inner">
+              <div class="about-card-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+              <div>
+                <h3 class="about-card-title">Our Mission</h3>
+                <p class="about-card-desc">To provide safe, reliable, and affordable car rental solutions while delivering exceptional customer service. We commit to maintaining the highest standards in vehicle quality and customer care.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHICLE COLLECTION -->
+  <section id="fleet" class="section-padding" style="background:hsl(var(--secondary))">
+    <div class="container-custom">
+      <div class="section-header">
+        <p class="section-label">Our Fleet</p>
+        <h2 class="section-title">Vehicle <span class="text-gradient">Collection</span></h2>
+        <p class="section-desc">Choose from our diverse range of well-maintained vehicles to suit your needs and budget.</p>
+      </div>
+      <div class="vehicles-grid">
+        <!-- Economy -->
+        <div class="card-glass vehicle-card">
+          <div class="vehicle-image-wrap">
+            <div class="vehicle-image-inner">
+              <img src="assets/car-economy.jpg" alt="Economy 1" class="visible" /><img src="assets/car-economy.jpg" alt="Economy 2" class="hidden" /><img src="assets/car-economy.jpg" alt="Economy 3" class="hidden" /><img src="assets/car-economy.jpg" alt="Economy 4" class="hidden" /><img src="assets/car-economy.jpg" alt="Economy 5" class="hidden" />
+            </div>
+            <button class="vehicle-nav-btn vehicle-nav-prev" aria-label="Previous"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button class="vehicle-nav-btn vehicle-nav-next" aria-label="Next"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+            <div class="vehicle-dots"><button class="vehicle-dot active"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button></div>
+            <div class="vehicle-gradient"></div>
+            <span class="vehicle-price">From $35/day</span>
+          </div>
+          <h3 class="vehicle-title">Economy &amp; Daily</h3>
+          <p class="vehicle-desc">Perfect for city commutes and daily errands. Fuel-efficient and easy</p>
+          <div class="vehicle-features">
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 4-5</span>
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="15" y1="22" y2="22"/><line x1="4" x2="14" y1="9" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg> Petrol</span>
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg> Auto/Manual</span>
+          </div>
+          <div class="vehicle-tags"><span class="vehicle-tag">Toyota Vios</span><span class="vehicle-tag">Honda City</span><span class="vehicle-tag">Mitsubishi Mirage</span></div>
+          <a href="#contact" class="btn-outline vehicle-book-btn">Book This Category</a>
+        </div>
+        <!-- MPV -->
+        <div class="card-glass vehicle-card">
+          <div class="vehicle-image-wrap">
+            <div class="vehicle-image-inner">
+              <img src="assets/car-mpv.jpg" alt="MPV 1" class="visible" /><img src="assets/car-mpv.jpg" alt="MPV 2" class="hidden" /><img src="assets/car-mpv.jpg" alt="MPV 3" class="hidden" /><img src="assets/car-mpv.jpg" alt="MPV 4" class="hidden" /><img src="assets/car-mpv.jpg" alt="MPV 5" class="hidden" />
+            </div>
+            <button class="vehicle-nav-btn vehicle-nav-prev" aria-label="Previous"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button class="vehicle-nav-btn vehicle-nav-next" aria-label="Next"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+            <div class="vehicle-dots"><button class="vehicle-dot active"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button></div>
+            <div class="vehicle-gradient"></div>
+            <span class="vehicle-price">From $65/day</span>
+          </div>
+          <h3 class="vehicle-title">MPV &amp; Family</h3>
+          <p class="vehicle-desc">Spacious and comfortable for family trips and group outings. Room for everyone.</p>
+          <div class="vehicle-features">
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 7-8</span>
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="15" y1="22" y2="22"/><line x1="4" x2="14" y1="9" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg> Petrol/Diesel</span>
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg> Auto</span>
+          </div>
+          <div class="vehicle-tags"><span class="vehicle-tag">Toyota Innova</span><span class="vehicle-tag">Honda Odyssey</span><span class="vehicle-tag">Kia Carnival</span></div>
+          <a href="#contact" class="btn-outline vehicle-book-btn">Book This Category</a>
+        </div>
+        <!-- Premium -->
+        <div class="card-glass vehicle-card">
+          <div class="vehicle-image-wrap">
+            <div class="vehicle-image-inner">
+              <img src="assets/car-premium.jpg" alt="Premium 1" class="visible" /><img src="assets/car-premium.jpg" alt="Premium 2" class="hidden" /><img src="assets/car-premium.jpg" alt="Premium 3" class="hidden" /><img src="assets/car-premium.jpg" alt="Premium 4" class="hidden" /><img src="assets/car-premium.jpg" alt="Premium 5" class="hidden" />
+            </div>
+            <button class="vehicle-nav-btn vehicle-nav-prev" aria-label="Previous"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button class="vehicle-nav-btn vehicle-nav-next" aria-label="Next"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+            <div class="vehicle-dots"><button class="vehicle-dot active"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button><button class="vehicle-dot"></button></div>
+            <div class="vehicle-gradient"></div>
+            <span class="vehicle-price">From $120/day</span>
+          </div>
+          <h3 class="vehicle-title">Premium &amp; VIP</h3>
+          <p class="vehicle-desc">Luxury vehicles for executive travel and special occasions. Travel in style.</p>
+          <div class="vehicle-features">
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 4-5</span>
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="15" y1="22" y2="22"/><line x1="4" x2="14" y1="9" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg> Petrol</span>
+            <span class="vehicle-feature"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg> Auto</span>
+          </div>
+          <div class="vehicle-tags"><span class="vehicle-tag">Mercedes E-Class</span><span class="vehicle-tag">BMW 5 Series</span><span class="vehicle-tag">Lexus ES</span></div>
+          <a href="#contact" class="btn-outline vehicle-book-btn">Book This Category</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section-padding">
+    <div class="container-custom">
+      <div class="section-header">
+        <p class="section-label">Testimonials</p>
+        <h2 class="section-title">What Our <span class="text-gradient">Clients Say</span></h2>
+        <p class="section-desc">Don't just take our word for it. Here's what our satisfied customers have to say about their experience.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="card-glass testimonial-card">
+          <div class="testimonial-quote"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg></div>
+          <div class="testimonial-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="testimonial-text">"Exceptional service from start to finish. The premium Mercedes was immaculate, and the booking process was incredibly smooth. Will definitely use again!"</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">SJ</div><div><p class="testimonial-name">Sarah Johnson</p><p class="testimonial-role">Business Executive</p></div></div>
+        </div>
+        <div class="card-glass testimonial-card">
+          <div class="testimonial-quote"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg></div>
+          <div class="testimonial-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="testimonial-text">"Rented an MPV for our family vacation. The vehicle was spacious, clean, and perfect for our road trip. The staff went above and beyond to help us."</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">MC</div><div><p class="testimonial-name">Michael Chen</p><p class="testimonial-role">Family Traveler</p></div></div>
+        </div>
+        <div class="card-glass testimonial-card">
+          <div class="testimonial-quote"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg></div>
+          <div class="testimonial-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p class="testimonial-text">"I've been using DriveLux for over a year now. Their prices are competitive, and the quality of vehicles is consistently excellent. Highly recommend!"</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">ER</div><div><p class="testimonial-name">Emily Rodriguez</p><p class="testimonial-role">Frequent Renter</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PROCESS -->
+  <section id="booking" class="section-padding">
+    <div class="container-custom">
+      <div class="section-header">
+        <p class="section-label">How to Book</p>
+        <h2 class="section-title">Easy Steps to Rent a Car with <span class="text-gradient">Fayden</span></h2>
+        <p class="section-desc">Renting a car has never been easier &ndash; just follow these simple steps!</p>
+      </div>
+      <div class="booking-grid">
+        <div class="card-glass booking-card">
+          <div class="booking-icon-area"><span class="booking-number">1</span><div class="booking-icon-box booking-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div></div>
+          <h3 class="booking-title">Choose a Car Model</h3><p class="booking-desc">Browse our fleet and pick the car that suits your needs and budget.</p>
+        </div>
+        <div class="card-glass booking-card">
+          <div class="booking-icon-area"><span class="booking-number">2</span><div class="booking-icon-box booking-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div></div>
+          <h3 class="booking-title">WhatsApp Us</h3><p class="booking-desc">Message us on WhatsApp to check availability for your preferred dates.</p>
+        </div>
+        <div class="card-glass booking-card">
+          <div class="booking-icon-area"><span class="booking-number">3</span><div class="booking-icon-box booking-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></div></div>
+          <h3 class="booking-title">Confirm Price &amp; Terms</h3><p class="booking-desc">We'll share the pricing details and rental terms for your review and confirmation.</p>
+        </div>
+        <div class="card-glass booking-card">
+          <div class="booking-icon-area"><span class="booking-number">4</span><div class="booking-icon-box booking-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div></div>
+          <h3 class="booking-title">Pay Security Deposit</h3><p class="booking-desc">Make a security deposit payment to reserve the car for your selected dates.</p>
+        </div>
+        <div class="card-glass booking-card">
+          <div class="booking-icon-area"><span class="booking-number">5</span><div class="booking-icon-box booking-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div></div>
+          <h3 class="booking-title">Car Delivered to You</h3><p class="booking-desc">Sit back and relax &ndash; the car is delivered straight to your location.</p>
+        </div>
+      </div>
+      <!-- Mobile slider version -->
+      <div class="booking-slider-wrap">
+        <div class="booking-slider">
+          <div class="card-glass booking-card">
+            <div class="booking-icon-area"><span class="booking-number">1</span><div class="booking-icon-box booking-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div></div>
+            <h3 class="booking-title">Choose a Car Model</h3><p class="booking-desc">Browse our fleet and pick the car that suits your needs and budget.</p>
+          </div>
+          <div class="card-glass booking-card">
+            <div class="booking-icon-area"><span class="booking-number">2</span><div class="booking-icon-box booking-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div></div>
+            <h3 class="booking-title">WhatsApp Us</h3><p class="booking-desc">Message us on WhatsApp to check availability for your preferred dates.</p>
+          </div>
+          <div class="card-glass booking-card">
+            <div class="booking-icon-area"><span class="booking-number">3</span><div class="booking-icon-box booking-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></div></div>
+            <h3 class="booking-title">Confirm Price &amp; Terms</h3><p class="booking-desc">We'll share the pricing details and rental terms for your review and confirmation.</p>
+          </div>
+          <div class="card-glass booking-card">
+            <div class="booking-icon-area"><span class="booking-number">4</span><div class="booking-icon-box booking-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div></div>
+            <h3 class="booking-title">Pay Security Deposit</h3><p class="booking-desc">Make a security deposit payment to reserve the car for your selected dates.</p>
+          </div>
+          <div class="card-glass booking-card">
+            <div class="booking-icon-area"><span class="booking-number">5</span><div class="booking-icon-box booking-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div></div>
+            <h3 class="booking-title">Car Delivered to You</h3><p class="booking-desc">Sit back and relax &ndash; the car is delivered straight to your location.</p>
+          </div>
+        </div>
+        <div class="booking-dots">
+          <button class="active" aria-label="Step 1"></button>
+          <button aria-label="Step 2"></button>
+          <button aria-label="Step 3"></button>
+          <button aria-label="Step 4"></button>
+          <button aria-label="Step 5"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-padding" style="background:hsl(var(--secondary))">
+    <div class="container-custom">
+      <div class="section-header">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+        <p class="section-desc">Find answers to common questions about our car rental services.</p>
+      </div>
+      <div class="faq-list">
+        <div class="card-glass faq-item"><button class="faq-question" aria-expanded="false">What documents do I need to rent a car?<svg class="icon faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">You'll need a valid driver's license (held for at least 1 year), a valid ID or passport, and a credit/debit card for the security deposit. International visitors should have an International Driving Permit (IDP) along with their home country license.</div></div></div>
+        <div class="card-glass faq-item"><button class="faq-question" aria-expanded="false">Is there a minimum rental period?<svg class="icon faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Our minimum rental period is 1 day (24 hours). We also offer weekly and monthly packages with special discounted rates for longer rentals.</div></div></div>
+        <div class="card-glass faq-item"><button class="faq-question" aria-expanded="false">What's included in the rental price?<svg class="icon faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">All our rentals include comprehensive insurance, 24/7 roadside assistance, basic maintenance, and a full tank of fuel (return full). Additional services like GPS, child seats, and drivers are available at extra cost.</div></div></div>
+        <div class="card-glass faq-item"><button class="faq-question" aria-expanded="false">Can I pick up and return at different locations?<svg class="icon faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes! We offer one-way rentals with pickup and drop-off at different locations. Additional fees may apply depending on the distance between locations.</div></div></div>
+        <div class="card-glass faq-item"><button class="faq-question" aria-expanded="false">What happens if I return the car late?<svg class="icon faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">We offer a 1-hour grace period. After that, late returns are charged at an hourly rate up to 4 hours, then as a full extra day. Please contact us if you anticipate being late.</div></div></div>
+        <div class="card-glass faq-item"><button class="faq-question" aria-expanded="false">Do you offer airport pickup and delivery?<svg class="icon faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely! We provide complimentary pickup and delivery to major airports, hotels, and select locations within the city center. Contact us to confirm availability for your location.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="contact" class="section-padding">
+    <div class="container-custom">
+      <div class="card-glass" style="max-width:56rem;margin:0 auto;padding:2rem;position:relative;overflow:hidden;">
+        <div class="form-decoration form-decoration-top"></div>
+        <div class="form-decoration form-decoration-bottom"></div>
+        <div class="form-inner">
+          <div class="section-header">
+            <p class="section-label">Start Your Journey</p>
+            <h2 class="section-title">Book Your <span class="text-gradient">Ride Now</span></h2>
+            <p class="section-desc" style="max-width:32rem">Fill out the form below and we'll get back to you within 30 minutes.</p>
+          </div>
+          <form id="bookingForm">
+            <div class="form-grid form-grid-3">
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><input type="text" name="name" placeholder="Full Name" required class="form-input" /></div>
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><input type="email" name="email" placeholder="Email Address" required class="form-input" /></div>
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><input type="tel" name="phone" placeholder="Phone Number" required class="form-input" /></div>
+            </div>
+            <div class="form-grid form-grid-2">
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><input type="text" name="pickupLocation" placeholder="Pickup Location" required class="form-input" /></div>
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><input type="text" name="dropoffLocation" placeholder="Drop-off Location" class="form-input" /></div>
+            </div>
+            <div class="form-grid form-grid-3">
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><input type="text" name="pickupDate" placeholder="DD/MM/YYYY" required class="form-input date-input" maxlength="10" inputmode="numeric" /></div>
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><input type="text" name="returnDate" placeholder="DD/MM/YYYY" required class="form-input date-input" maxlength="10" inputmode="numeric" /></div>
+              <div class="form-group"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg><select name="vehicleType" required class="form-select"><option value="">Select Vehicle Type</option><option value="economy">Economy &amp; Daily</option><option value="mpv">MPV &amp; Family</option><option value="premium">Premium &amp; VIP</option></select></div>
+            </div>
+            <button type="submit" class="btn-primary form-submit">Submit Booking Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="background:hsl(var(--card))">
+    <div class="container-custom section-padding" style="padding-bottom:2rem">
+      <div class="footer-grid">
+        <div>
+          <a href="#hero" class="navbar-brand" style="margin-bottom:1rem;display:inline-flex"><svg class="icon-2xl" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg><span class="navbar-brand-text">DRIVE<span style="color:hsl(38,92%,50%)">LUX</span></span></a>
+          <p class="footer-brand-desc">Premium car rental service delivering exceptional experiences since 2015. Your trusted partner on the road.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" class="footer-social" aria-label="Twitter"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div><h4 class="footer-heading">Quick Links</h4><div class="footer-links"><a href="#hero">Home</a><a href="#about">About Us</a><a href="#fleet">Our Fleet</a><a href="#booking">How to Book</a><a href="#faq">FAQ</a></div></div>
+        <div><h4 class="footer-heading">Services</h4><div class="footer-links"><a href="#fleet">Economy Cars</a><a href="#fleet">Family MPVs</a><a href="#fleet">Premium Vehicles</a><a href="#contact">Airport Pickup</a><a href="#contact">Corporate Rental</a></div></div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>123 Business Avenue, Suite 100, Downtown City, 12345</span></div>
+          <div class="footer-contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+15551234567">+1 (555) 123-4567</a></div>
+          <div class="footer-contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:info@drivelux.com">info@drivelux.com</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DriveLux. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <img id="lightboxImg" src="" alt="Vehicle preview" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
