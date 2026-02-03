@@ -74,12 +74,16 @@
     }
 
     // Desktop: prev/next buttons
-    prev.addEventListener('click', function () {
-      if (!isMobile.matches) show(current - 1);
-    });
-    next.addEventListener('click', function () {
-      if (!isMobile.matches) show(current + 1);
-    });
+    if (prev) {
+      prev.addEventListener('click', function () {
+        if (!isMobile.matches) show(current - 1);
+      });
+    }
+    if (next) {
+      next.addEventListener('click', function () {
+        if (!isMobile.matches) show(current + 1);
+      });
+    }
 
     // Dot clicks
     dots.forEach(function (dot, i) {
@@ -93,17 +97,19 @@
     });
 
     // Mobile: scroll-based dot update
-    inner.addEventListener('scroll', function () {
-      if (!isMobile.matches) return;
-      var scrollLeft = inner.scrollLeft;
-      var width = inner.offsetWidth;
-      var activeIndex = Math.round(scrollLeft / width);
-      activeIndex = Math.max(0, Math.min(activeIndex, total - 1));
-      current = activeIndex;
-      dots.forEach(function (dot, i) {
-        dot.className = 'vehicle-dot' + (i === activeIndex ? ' active' : '');
+    if (inner) {
+      inner.addEventListener('scroll', function () {
+        if (!isMobile.matches) return;
+        var scrollLeft = inner.scrollLeft;
+        var width = inner.offsetWidth;
+        var activeIndex = Math.round(scrollLeft / width);
+        activeIndex = Math.max(0, Math.min(activeIndex, total - 1));
+        current = activeIndex;
+        dots.forEach(function (dot, i) {
+          dot.className = 'vehicle-dot' + (i === activeIndex ? ' active' : '');
+        });
       });
-    });
+    }
   });
 })();
 
@@ -157,6 +163,19 @@
         openLightbox(imgSources, index);
       });
     });
+  });
+
+  // Attach click events to all photo gallery items
+  var galleryImgs = Array.from(document.querySelectorAll('.gallery-image'));
+  var gallerySources = galleryImgs.map(function (img) { return img.src; });
+
+  galleryImgs.forEach(function (img, index) {
+    var item = img.closest('.gallery-item');
+    if (item) {
+      item.addEventListener('click', function () {
+        openLightbox(gallerySources, index);
+      });
+    }
   });
 
   // Event Listeners for Lightbox Controls
@@ -276,26 +295,23 @@
 
   // Auto-open picker on click anywhere in the input
   allDateTimeInputs.forEach(function (input) {
-    input.addEventListener('click', function () {
-      // Check if showPicker is supported (modern browsers)
-      if ('showPicker' in this) {
-        this.showPicker();
-      }
-    });
+    if (input) {
+      input.addEventListener('click', function () {
+        if ('showPicker' in this) {
+          this.showPicker();
+        }
+      });
+    }
   });
 
   if (!pickupInput || !returnInput) return;
 
-  // Set minimum date to today
   var today = new Date().toISOString().split('T')[0];
   pickupInput.setAttribute('min', today);
   returnInput.setAttribute('min', today);
 
-  // When pickup date changes, update return date minimum
   pickupInput.addEventListener('change', function () {
     returnInput.setAttribute('min', this.value || today);
-
-    // If return date is before pickup date, clear it
     if (returnInput.value && returnInput.value < this.value) {
       returnInput.value = '';
     }
@@ -303,66 +319,41 @@
 })();
 
 // Booking Form Submit - Send to WhatsApp
-document.getElementById('bookingForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+var bookingForm = document.getElementById('bookingForm');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  // Get form data
-  var name = this.name.value;
-  var phone = this.phone.value;
-  var vehicle = this.vehicle.value;
-  var pickupDate = this.pickupDate.value;
-  var pickupTime = this.pickupTime.value;
-  var returnDate = this.returnDate.value;
-  var returnTime = this.returnTime.value;
-  var location = this.location.value;
+    var name = this.name.value;
+    var phone = this.phone.value;
+    var vehicle = this.vehicle.value;
+    var pickupDate = this.pickupDate.value;
+    var pickupTime = this.pickupTime.value;
+    var returnDate = this.returnDate.value;
+    var returnTime = this.returnTime.value;
+    var location = this.location.value;
 
-  // Format dates for better readability
-  var formattedPickupDate = new Date(pickupDate).toLocaleDateString('en-GB');
-  var formattedReturnDate = new Date(returnDate).toLocaleDateString('en-GB');
+    var formattedPickupDate = new Date(pickupDate).toLocaleDateString('en-GB');
+    var formattedReturnDate = new Date(returnDate).toLocaleDateString('en-GB');
 
-  // Create WhatsApp message
-  var message = '*🚗 NEW CAR RENTAL BOOKING REQUEST*\n\n';
-  message += '*Name:* ' + name + '\n';
-  message += '*Phone Number:* ' + phone + '\n';
-  message += '*Vehicle:* ' + vehicle + '\n\n';
-  message += '*📅 Pickup Details:*\n';
-  message += '• Date: ' + formattedPickupDate + '\n';
-  message += '• Time: ' + pickupTime + '\n\n';
-  message += '*📅 Return Details:*\n';
-  message += '• Date: ' + formattedReturnDate + '\n';
-  message += '• Time: ' + returnTime + '\n\n';
-  message += '*📍 Delivery Location:* ' + location + '\n\n';
-  message += 'Looking forward to hearing from you! 🙏';
+    var message = '*🚗 NEW CAR RENTAL BOOKING REQUEST*\n\n';
+    message += '*Name:* ' + name + '\n';
+    message += '*Phone Number:* ' + phone + '\n';
+    message += '*Vehicle:* ' + vehicle + '\n\n';
+    message += '*📅 Pickup Details:*\n';
+    message += '• Date: ' + formattedPickupDate + '\n';
+    message += '• Time: ' + pickupTime + '\n\n';
+    message += '*📅 Return Details:*\n';
+    message += '• Date: ' + formattedReturnDate + '\n';
+    message += '• Time: ' + returnTime + '\n\n';
+    message += '*📍 Delivery Location:* ' + location + '\n\n';
+    message += 'Looking forward to hearing from you! 🙏';
 
-  // Fayden Car Rental WhatsApp number (601157746854)
-  var whatsappNumber = '601157746854';
+    var whatsappNumber = '601157746854';
+    var encodedMessage = encodeURIComponent(message);
+    var whatsappURL = 'https://wa.me/' + whatsappNumber + '?text=' + encodedMessage;
 
-  // Encode message for URL
-  var encodedMessage = encodeURIComponent(message);
-
-  // Create WhatsApp URL
-  var whatsappURL = 'https://wa.me/' + whatsappNumber + '?text=' + encodedMessage;
-
-  // Open WhatsApp
-  window.open(whatsappURL, '_blank');
-
-  // Reset form
-  this.reset();
-});
-
-// Gallery Lightbox
-(function () {
-  var galleryItems = document.querySelectorAll('.gallery-item');
-  var lightbox = document.getElementById('lightbox');
-  var lightboxImg = document.getElementById('lightboxImg');
-
-  galleryItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-      var img = this.querySelector('.gallery-image');
-      if (img) {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('open');
-      }
-    });
+    window.open(whatsappURL, '_blank');
+    this.reset();
   });
-})();
+}
