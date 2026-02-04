@@ -332,22 +332,29 @@ if (bookingForm) {
     var returnDate = this.returnDate.value;
     var returnTime = this.returnTime.value;
     var location = this.location.value;
+    var currentLocation = this.currentLocation.value;
+    var destination = this.destination.value;
+    var purpose = this.purpose.value;
 
     var formattedPickupDate = new Date(pickupDate).toLocaleDateString('en-GB');
     var formattedReturnDate = new Date(returnDate).toLocaleDateString('en-GB');
 
-    var message = '*🚗 NEW CAR RENTAL BOOKING REQUEST*\n\n';
+    var message = '*NEW CAR RENTAL BOOKING REQUEST*\n\n';
     message += '*Name:* ' + name + '\n';
     message += '*Phone Number:* ' + phone + '\n';
     message += '*Vehicle:* ' + vehicle + '\n\n';
-    message += '*📅 Pickup Details:*\n';
+    message += '*Pickup Details:*\n';
     message += '• Date: ' + formattedPickupDate + '\n';
     message += '• Time: ' + pickupTime + '\n\n';
-    message += '*📅 Return Details:*\n';
+    message += '*Return Details:*\n';
     message += '• Date: ' + formattedReturnDate + '\n';
     message += '• Time: ' + returnTime + '\n\n';
-    message += '*📍 Delivery Location:* ' + location + '\n\n';
-    message += 'Looking forward to hearing from you! 🙏';
+    message += '*Locations:*\n';
+    message += '• Current Location: ' + currentLocation + '\n';
+    message += '• Destination: ' + destination + '\n';
+    message += '• Delivery Location: ' + location + '\n\n';
+    message += '*Purpose:* ' + purpose + '\n\n';
+    message += 'Looking forward to hearing from you!';
 
     var whatsappNumber = '601157746854';
     var encodedMessage = encodeURIComponent(message);
