@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: fayden-car-rental
+    env: static
+    buildCommand: ""
+    staticPublishPath: ./
