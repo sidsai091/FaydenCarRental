@@ -364,3 +364,68 @@ if (bookingForm) {
     this.reset();
   });
 }
+
+
+/* Audio Player Control */
+document.addEventListener('DOMContentLoaded', function () {
+  var audio = document.getElementById("bg-music");
+  var toggleBtn = document.getElementById('audioToggle');
+  var iconOn = toggleBtn.querySelector('.icon-volume-on');
+  var iconOff = toggleBtn.querySelector('.icon-volume-off');
+
+  function updateIcon() {
+    if (audio.paused) {
+      iconOn.classList.add('hidden');
+      iconOff.classList.remove('hidden');
+    } else {
+      iconOn.classList.remove('hidden');
+      iconOff.classList.add('hidden');
+    }
+  }
+
+  if (audio) {
+    audio.volume = 1.0; // Set volume to max
+
+    // 1. Try to play immediately
+    var playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Success: Audio is playing
+        console.log("Audio playing automatically");
+        updateIcon();
+      }).catch(error => {
+        // Failure: Browser blocked it
+        console.log("Autoplay prevented. Waiting for user interaction.");
+        updateIcon();
+
+        // 2. Add listener to play on the first interaction
+        // Using a named function to allow easy removal
+        var playOnFirstInteraction = function () {
+          audio.play().then(() => {
+            updateIcon();
+            // Remove listeners once played
+            ['click', 'touchstart', 'keydown', 'mousemove', 'scroll'].forEach(event => {
+              document.removeEventListener(event, playOnFirstInteraction);
+            });
+          }).catch(e => console.log("Playback failed on interaction:", e));
+        };
+
+        ['click', 'touchstart', 'keydown', 'mousemove', 'scroll'].forEach(event => {
+          document.addEventListener(event, playOnFirstInteraction, { once: true });
+        });
+      });
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+      updateIcon();
+    });
+  }
+});
